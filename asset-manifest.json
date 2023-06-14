@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f9fed06b.css",
+    "main.js": "/static/js/main.af97429c.js",
+    "static/media/cloudcomputing.pptx": "/static/media/cloudcomputing.a366e862a1c44149daba.pptx",
+    "static/media/portfolio2.png": "/static/media/portfolio2.115c00495a4b4caf8a87.png",
+    "static/media/me.png": "/static/media/me.3b0937ceb5e890dedd1a.png",
+    "static/media/about--me.jpg": "/static/media/about--me.4f7f4e21df30ccbf7b33.jpg",
+    "static/media/newportfolio3.png": "/static/media/newportfolio3.f5eca3d8a6cec419f1b7.png",
+    "static/media/newportfolio1.png": "/static/media/newportfolio1.c567a9761d86ddd4bb67.png",
+    "index.html": "/index.html",
+    "main.f9fed06b.css.map": "/static/css/main.f9fed06b.css.map",
+    "main.af97429c.js.map": "/static/js/main.af97429c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f9fed06b.css",
+    "static/js/main.af97429c.js"
+  ]
+}
