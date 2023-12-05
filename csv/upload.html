@@ -48,7 +48,10 @@ button {
         const formData = new FormData();
         formData.append('csvFile', file);
 
-        fetch('upload.php', {
+        // Update the URL to the correct PHP file location
+        const phpFileURL = 'https://php.aminnepali.com.np/upload.php';
+
+        fetch(phpFileURL, {
             method: 'POST',
             body: formData
         })
@@ -63,6 +66,7 @@ button {
         alert('Please choose a CSV file.');
     }
 }
+
 </script>
 </body>
 </html>
