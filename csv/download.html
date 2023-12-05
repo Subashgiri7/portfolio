@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Download CSV</title>
+</head>
+<body>
+  <style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+  </style>
+    <div class="container">
+        <h1>Download CSV</h1>
+        <button onclick="downloadCSV()">Download CSV</button>
+    </div>
+
+    <script>
+      function downloadCSV() {
+    // Update the URL to the correct PHP file location
+    const phpFileURL = 'https://php.aminnepali.com.np/download.php';
+
+    fetch(phpFileURL)
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                // Trigger CSV download
+                const csvContent = 'data:text/csv;charset=utf-8,' + encodeURIComponent(data.csv);
+                const downloadLink = document.createElement('a');
+                downloadLink.href = csvContent;
+                downloadLink.download = 'database_data.csv';
+                document.body.appendChild(downloadLink);
+                downloadLink.click();
+                document.body.removeChild(downloadLink);
+            } else {
+                alert('Error downloading CSV. Please try again.');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+    </script>
+</body>
+</html>
